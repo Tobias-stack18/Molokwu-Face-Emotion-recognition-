@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="card">
+            <h1 class="title">Emotion Detector</h1>
+
+            <form id="uploadForm" method="POST" action="/predict" enctype="multipart/form-data">
+
+                <input type="text" name="name" class="input" placeholder="Enter your name" required>
+
+                <input type="text" name="email" class="input" placeholder="Enter your email" required>
+
+                <div class="file-input">
+                    <input type="file" name="image" accept="image/*" required>
+                </div>
+
+                <button class="btn" type="submit">Detect Emotion</button>
+            </form>
+
+            <p class="footer">
+                Powered by AI — Made by Miss Somto <span class="heart">🤍</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // async submission result
+        const form = document.getElementById("uploadForm");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+
+            const response = await fetch("/predict", {
+                method: "POST",
+                body: data
+            });
+
+            const result = await response.json();
+            if (result.error) {
+                alert("Error: " + result.error);
+            } else {
+                alert("Detected Emotion: " + result.emotion);
+            }
+        });
+    </script>
+
+</body>
+</html>

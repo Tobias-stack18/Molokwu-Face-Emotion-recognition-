@@ -1,0 +1,91 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f2eadf;  /* <-- warm beige */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* WRAPPER */
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    width: 420px;
+    background: #fff8ef; /* cream */
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* TITLE */
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #3a2e2a;
+    margin-bottom: 25px;
+}
+
+/* INPUT FIELDS */
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #d4c7b7;
+    background: #f9f3eb;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+.input:focus {
+    border-color: #ad9c8b;
+}
+
+/* FILE INPUT */
+.file-input input {
+    width: 100%;
+    padding: 12px;
+    background: #f9f3eb;
+    border: 1px solid #d4c7b7;
+    border-radius: 10px;
+}
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #43a047;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6b5e55;
+}
+
+.heart {
+    color: #7c5236;
+}
