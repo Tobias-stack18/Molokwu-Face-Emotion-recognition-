@@ -4,7 +4,5 @@ keras
 opencv-python
 numpy
 pillow
-sqlite3-binary ; # note: SQLite is built-in; this line optional
-werkzeug
-gunicorn        # for deployment (Heroku/Render)
-python-dotenv   # optional for env vars
+gunicorn
+python-dotenv
